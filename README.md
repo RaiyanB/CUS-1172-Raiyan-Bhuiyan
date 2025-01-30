@@ -18,7 +18,7 @@ This is **Milestone One** for the course **WEB APPLICATION DEVELOPMENT CUS-1172*
 
 ### **Live Website**  
 View my profile page here:  
-👉 [**Profile Page**](https://raiyanb.github.io/Profile-Page/)  
+👉 [**Profile Page**]([https://raiyanb.github.io/Profile-Page/](https://raiyanb.github.io/CUS-1172-Raiyan-Bhuiyan/))  
 
 
 
