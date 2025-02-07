@@ -4,19 +4,53 @@
     box-sizing: border-box;
 }
 
+p span {
+    color: white;
+    font-weight: bold;
+}
+
 body {
     background-color: #f4f4f9;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #333;
+    color: #000000;
     line-height: 1.6;
 }
 
+
+#profile-name {
+    color: white;           
+    font-size: 3em;
+    margin-bottom: 10px;
+    animation: fadeIn 2s ease-in-out;  
+}
+
+
+#interests table {
+    width: 200px; 
+    border-collapse: collapse;
+    margin: 20px auto; 
+}
+
+#interests th, #interests td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
 header {
-    background: linear-gradient(to right, #4e54c8, #8f94fb);
+    background: linear-gradient(to right, #4e54c8, #4e54c8);
     color: white;
     padding: 40px 20px;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgb(0, 0, 0);
+}
+
+
+
+header h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    color: white; 
 }
 
 header img {
@@ -27,7 +61,7 @@ header img {
 }
 
 nav {
-    background-color: #333;
+    background-color: #000000;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -61,6 +95,26 @@ section {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
+section img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+
+.highlight-box {
+    background-color: #f0f0f5;   
+    color: #000000;                 
+    padding: 15px;
+    border-left: 5px solid #4e54c8; 
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -76,15 +130,38 @@ th {
     color: white;
 }
 
-form input[type="submit"] {
-    background-color: #4e54c8;
-    color: white;
-    border: none;
-    padding: 12px;
-    border-radius: 5px;
-    cursor: pointer;
+
+@media print {
+    nav, iframe, form {
+        display: none;  
+    }
+
+    body {
+        background: white;
+        color: black;
+        font-size: 12pt;
+    }
+
+    section {
+        box-shadow: none;
+        border: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    a::after {
+        content: " (" attr(href) ")"; 
+    }
 }
 
-form input[type="submit"]:hover {
-    background-color: #8f94fb;
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
