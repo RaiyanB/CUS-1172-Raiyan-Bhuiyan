@@ -25,6 +25,19 @@ body {
 }
 
 
+.image-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Adds spacing between images */
+}
+
+.image-container img {
+    width: 45%; /* Adjust width as needed */
+    max-width: 100%;
+    heig
+    }
+
+
 #interests table {
     width: 200px; 
     border-collapse: collapse;
