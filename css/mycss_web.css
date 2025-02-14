@@ -82,7 +82,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #575757;
+    background-color: #4e54c8;
     padding: 10px 20px;
 }
 
@@ -115,22 +115,34 @@ section img {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    text-align: center;
 }
 
-table, th, td {
+th, td {
     border: 1px solid #ddd;
+    padding: 12px; 
+    text-align: center;
+    vertical-align: middle; 
 }
+
 
 th {
     background-color: #4e54c8;
     color: white;
+    font-weight: bold;
+    text-align: center;
 }
 
 
+table tbody tr:hover {
+    background-color: #4e54c8;
+
+}
 @media print {
     nav, iframe, form {
         display: none;  
@@ -165,3 +177,197 @@ th {
         transform: translateY(0);
     }
 }
+
+
+
+/* Center the Navbar Content */
+.navbar {
+    display: flex;
+    justify-content: center; /* Centers all navbar items horizontally */
+    align-items: center; /* Centers items vertically */
+    text-align: center;
+    background-color: #000000 !important; /* Ensures navbar is black */
+}
+
+/* Center Navbar Links */
+.navbar-nav {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Centers all links */
+    text-align: center;
+}
+
+/* Ensure Navbar Links Are Properly Aligned */
+.navbar-nav .nav-item {
+    text-align: center;
+    padding: 0 10px; /* Adjust spacing */
+}
+
+/* Navbar Text Styling */
+.navbar-nav .nav-link {
+    color: white !important;
+    font-weight: bold;
+    font-size: 18px; /* Increase text size for readability */
+}
+
+/* Hover Effect */
+.navbar-nav .nav-link:hover {
+    color: yellow !important; /* Change color on hover */
+}
+
+
+
+#work h2 {
+    color:  #4e54c8 !important; /* Change to your desired color */
+    font-weight: bold;
+    text-align: center;
+
+}
+
+#work .card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Ensure card body fills the space properly */
+#work .card-body {
+    flex-grow: 1; /* Allows the card to expand evenly */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Work Experience Section */
+#work .row {
+    display: flex;
+    flex-wrap: wrap; /* Ensures responsiveness */
+    justify-content: center; /* Centers items */
+    gap: 20px; /* Adds space between cards */
+}
+
+/* Ensure each card is equal in size */
+#work .col-md-4 {
+    flex: 1 1 calc(33.33% - 20px); /* 3 cards per row */
+    max-width: calc(33.33% - 20px);
+}
+
+/* Make sure all cards are the same height */
+#work .card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Ensure the card content fills space */
+#work .card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Adjustments for Medium Screens */
+@media (max-width: 992px) {
+    #work .col-md-4 {
+        flex: 1 1 calc(50% - 20px); /* 2 cards per row */
+        max-width: calc(50% - 20px);
+    }
+}
+
+/* Adjustments for Small Screens */
+@media (max-width: 768px) {
+    #work .col-md-4 {
+        flex: 1 1 100%; /* 1 card per row */
+        max-width: 100%;
+    }
+}
+
+/* Improve readability of the text inside the cards */
+#work .card-text {
+    font-size: 16px;
+    line-height: 1.4;
+
+}
+
+/* Customize Skills Table */
+.skills-table {
+    background-color: #4e54c8; /* Change background color */
+    color: white; /* Make text white */
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Table Header (Title Row) */
+.skills-table thead {
+    background-color: #2c3e50; /* Dark Blue */
+    color: white;
+}
+
+/* Table Rows */
+.skills-table tbody tr {
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent white */
+    color: white;
+}
+
+/* Hover Effect */
+.skills-table tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Slightly darker on hover */
+}
+
+/* Table Borders */
+.skills-table th, .skills-table td {
+    border: 1px solid white; /* White border for contrast */
+    padding: 10px;
+    text-align: center;
+}
+
+/* Improve Readability */
+.skills-table td {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#skills h2 {
+    color: #4e54c8 !important; /* Change this HEX color */
+    font-weight: bold;
+}
+
+#education h2 {
+    color: #4e54c8 !important; /* Change this HEX color */
+    font-weight: bold;
+}
+
+/* Work Experience Cards */
+#work .card {
+    width: 100%;
+    max-width: 300px; /* Reduce width */
+    height: 100%; /* Ensures equal height */
+    margin: 10px auto; /* Centers cards properly */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Make Card Content Fill the Space */
+#work .card-body {
+    font-size: 14px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Ensure Text Wraps Neatly */
+#work .card-text {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* Responsive Grid Alignment */
+@media (max-width: 768px) {
+    #work .card {
+        max-width: 100%; /* Full width on small screens */
+    }
+}
+
