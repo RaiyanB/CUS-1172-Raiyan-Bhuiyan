@@ -1,26 +1,36 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
+  background-color: #e9ecef;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
 .container {
-    max-width: 600px;
+  max-width: 600px;
 }
-
-.task-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    border-radius: 5px;
+.card {
+  background: #fff;
+  border: none;
+  border-radius: 10px;
 }
-
+#taskList .list-group-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+  animation: fadeIn 0.5s;
+}
 .task-item span {
-    flex-grow: 1;
-    margin-left: 10px;
+  flex-grow: 1;
+  margin-right: 10px;
 }
-
 .task-completed {
-    text-decoration: line-through;
-    color: gray;
+  text-decoration: line-through;
+  color: #6c757d;
+  background-color: #d4edda;
+}
+.btn-sm {
+  margin-left: 5px;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
