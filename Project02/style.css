@@ -3,7 +3,7 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Wide border around the page */
+
 .page-border {
   max-width: 700px;
   margin: auto;
@@ -14,12 +14,13 @@ body {
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Task Image Styling */
+
 .task-image {
-  max-width: 100%;
-  height: auto;
+  width: 200px;  
+  height: auto;  
+  display: block;
+  margin: 0 auto 15px auto; 
   border-radius: 10px;
-  margin-bottom: 15px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
