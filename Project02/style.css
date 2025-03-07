@@ -1,1 +1,26 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
 
+.container {
+    max-width: 600px;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.task-item span {
+    flex-grow: 1;
+    margin-left: 10px;
+}
+
+.task-completed {
+    text-decoration: line-through;
+    color: gray;
+}
