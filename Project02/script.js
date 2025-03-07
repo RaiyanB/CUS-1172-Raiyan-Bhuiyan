@@ -34,21 +34,21 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     
-    function renderTasks() {
-        taskList.innerHTML = ""; 
+function renderTasks() {
+    taskList.innerHTML = ""; 
 
-        tasks.forEach(task => {
-            const li = document.createElement("li");
-            li.className = `list-group-item task-item ${task.status === "Completed" ? "task-completed" : ""}`;
-            li.innerHTML = `
-                <span>${task.title} - <strong>${task.priority}</strong> (${task.status})</span>
-                <button class="btn btn-sm btn-success mark-complete" data-id="${task.id}">✔</button>
-                <button class="btn btn-sm btn-danger remove-task" data-id="${task.id}">✖</button>
-            `;
+    tasks.forEach(task => {
+        const li = document.createElement("li");
+        li.className = `list-group-item task-item ${task.status === "Completed" ? "task-completed" : ""}`;
+        li.innerHTML = `
+            <span>${task.title} - <strong>${task.priority}</strong> (${task.status})</span>
+            <button class="btn btn-sm btn-success mark-complete" data-id="${task.id}">✔</button>
+            <button class="btn btn-sm btn-danger remove-task" data-id="${task.id}">✖</button>
+        `;
 
-            taskList.appendChild(li);
-        });
-    }
+        taskList.appendChild(li);
+    });
+}
 
   
     taskList.addEventListener("click", function(event) {
